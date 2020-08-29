@@ -12,11 +12,11 @@ public interface UserRepository extends JpaRepository<User, UUID> {
 
     User save(User user);
 
-    Optional<User> findById(String id);
+    Optional<User> findById(UUID id);
 
     Optional<User> findByLoginAndPass(String login, String pass);
 
-    Optional<User> findFirstByLogin(String login);
+    Optional<User> findByLogin(String login);
 
-    Optional<User> findFirstByEmail(String email);
+    Optional<User> findByEmail(String email);
 }

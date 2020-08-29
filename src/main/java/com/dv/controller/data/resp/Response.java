@@ -1,4 +1,4 @@
-package com.dv.controller.model;
+package com.dv.controller.data.resp;
 
 import lombok.Builder;
 import lombok.Data;

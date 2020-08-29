@@ -1,4 +1,4 @@
-package com.dv.controller.model.request;
+package com.dv.controller.data.req;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 @Data
-public class Contact {
+public class RequestContact {
     @NotBlank(message = "Name is mandatory")
     private String name;
     @NotBlank(message = "Email is mandatory")

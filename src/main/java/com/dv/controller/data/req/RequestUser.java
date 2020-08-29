@@ -1,4 +1,4 @@
-package com.dv.controller.model.request;
+package com.dv.controller.data.req;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 @Data
-public class User extends UserLogin {
+public class RequestUser extends RequestUserLogin {
     @NotBlank(message = "Password is mandatory")
     private String confirmPass;
     @NotBlank(message = "Email is mandatory")

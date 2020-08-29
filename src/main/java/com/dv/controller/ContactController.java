@@ -1,8 +1,8 @@
 package com.dv.controller;
 
-import com.dv.controller.model.Response;
-import com.dv.controller.model.request.Contact;
-import com.dv.flow.util.EmailService;
+import com.dv.controller.data.resp.Response;
+import com.dv.controller.data.req.RequestContact;
+import com.dv.service.util.EmailUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,10 +16,10 @@ import javax.validation.Valid;
 public class ContactController {
 
     @Autowired
-    EmailService emailService;
+    EmailUtils emailUtils;
 
     @PostMapping
-    public Response contact(@Valid @RequestBody Contact contact) {
-        return emailService.sendEmail(contact);
+    public Response sendMail(@Valid @RequestBody RequestContact requestContact) {
+        return emailUtils.sendEmail(requestContact);
     }
 }

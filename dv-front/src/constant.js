@@ -2,7 +2,7 @@ const app_name = "Draftviewo";
 
 const palette = {
     main: '#010101',
-    add1: '#69779b',
+    add1: '#acdbdf',
     add2: '#acdbdf',
     back: '#f0ece2'
 };

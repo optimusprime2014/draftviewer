@@ -1,6 +1,8 @@
-# Getting Started
+# Draftviewo
 
-Draft viewer - tool for quick reading project from zip archive. 
+Spring Boot application what provides quick analysis project from zip archive.
+
+## [Demo](http://162.250.120.118:8001)
 
 ### Stack
 
@@ -10,81 +12,32 @@ Draft viewer - tool for quick reading project from zip archive.
 
 * Postgresql 9.2
 
-* Vue
-
-* Vuetify
+* Vue, Vuetify
 
 * ---
 
-# Install DB (postgres)
+### Install front
 
-port `5344` for local-env
-
-```create batabase draftviewer;```
-
-```create user draftvuser with encrypted password 'pav2019PAV';```
-
-```grant all privileges on database draftviewer to draftvuser;```
-
-```
-create schema public;
-   
-   comment on schema public is 'standard public schema';
-   
-   alter schema public owner to postgres;
-   
-   create table users
-   (
-       id uuid not null
-           constraint users_pkey
-               primary key,
-       login varchar,
-       pass varchar,
-       email varchar
-   );
-   
-   alter table users owner to draftvuser;
-   
-   create table project
-   (
-       id uuid not null
-           constraint project_pkey
-               primary key,
-       name varchar,
-       tree json
-   );
-   
-   alter table project owner to draftvuser;
-   
-   
-   INSERT INTO public.users (id, login, pass, email) VALUES ('ef70c79c-4ebf-4de0-9c62-dd1046749322', 'user', 'f5d66ced28551b636ee550162090bdf8f6f75c3f', 'user@example.com');
-```
-
-# Install front
-
-    sudo apt install nodejs
+    apt install nodejs
     
-    sudo apt install npm
+    apt install npm
     
-    sudo npm install -g @vue/cli
+    npm install -g @vue/cli
     
-    cd ./dv-front
+    cd <path>/<project-root>/dv-front
     
     npm install
     
-    npm cache clear
-    
     npm run build/serve
 
-# Run application
+### Build application
 
-    mvn clean install -DskipTests=true
+    mvn clean install
     
-* THEN: run spring-app via IDEA or jar
+### Run application
 
-# Getting Started
+    via IDEA
 
-### Reference Documentation
-Description
+or
 
-* [link](https://index.html)
+    nohup java -jar cd <path>/<project-root>/target/dv-0.0.1-SNAPSHOT.jar &

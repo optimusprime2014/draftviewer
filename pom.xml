@@ -12,7 +12,7 @@
 	<artifactId>dv</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Draftviewo</name>
-	<description>Draftviewo project for Spring Boot</description>
+	<description>Spring Boot application what provides quick analysis project from zip archive</description>
 	<packaging>jar</packaging>
 
 	<properties>

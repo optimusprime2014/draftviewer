@@ -1,4 +1,4 @@
-package com.dv.controller.model.request;
+package com.dv.controller.data.req;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Data
-public class UserLogin {
+public class RequestUserLogin {
     @NotBlank(message = "Login is mandatory")
     private String login;
     @NotBlank(message = "Password is mandatory")

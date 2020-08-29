@@ -1,5 +1,6 @@
-package com.dv.flow.util;
+package com.dv.service.util;
 
+import com.dv.db.model.Project;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Service;
@@ -14,8 +15,9 @@ import java.util.zip.ZipInputStream;
 
 @Slf4j
 @Service
-public class ParseService {
-    public Optional<String> parseFile(MultipartFile file) {
+public class ParseUtils {
+
+    public Optional<Project> parseFile(MultipartFile file) {
         log.info("Parsing multipart file: {}", file.getOriginalFilename());
         Optional<String> result = Optional.empty();
         try {
@@ -36,7 +38,7 @@ public class ParseService {
         } catch (IOException ioe) {
             System.out.println("Error opening zip file" + ioe);
         }
-        return result;
+        return null;
     }
 
     private ZipFile convertFile(MultipartFile file) throws IOException {
